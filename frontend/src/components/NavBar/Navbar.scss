@@ -43,6 +43,7 @@
 
     li{
         margin: 0 1rem;
+        font-size: 1rem;
         flex-direction: column;
 
 
@@ -74,6 +75,108 @@
                 background: var(--secondary-color);
             }
         }
+    }
+
+    @media screen and (max-width : 900px) {
+        display: none;
+    }
+
+}
+
+
+.app__navbar-menu{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+
+    background-color: var(--secondary-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg{
+        width: 70%;
+        height: 70%;
+        color: var(--white-color);
+    }
+
+
+    div{
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 70%;
+        height: 100vh;
+
+        padding: 1rem;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+
+        background-color: var(--white-color);
+        background: url('../../assets/bgWhite.png');
+        background-size: cover;
+        background-repeat: repeat;
+
+        box-shadow: 0 0 20px rgba(168,168,168,0.15);
+
+
+        svg{
+            width: 35px;
+            height: 35px;
+            color: var(--white-color);
+
+            margin: 0 1rem;
+
+        }
+
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+
+            li{
+                margin: 1rem;
+
+                a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: var(--gray-color);
+                    font-weight: 500;
+                    transition: all 0.3s ease-in-out;
+    
+                    &:hover{
+                        color: var(--secondary-color);
+                    }
+                }
+
+            }
+            
+
+
+        }
+
+        @media screen and (min-width: 900px) {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        display: none;
     }
 
 }

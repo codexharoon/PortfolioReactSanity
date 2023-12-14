@@ -1,8 +1,11 @@
 import React from "react";
 import "./Navbar.scss";
+import { motion } from "framer-motion";
+import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { images } from "../../constants";
 
 const Navbar = () => {
+  const [toogle, setToogle] = React.useState(false);
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -17,6 +20,28 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+
+      <div className="app__navbar-menu">
+        {!toogle && <HiMenuAlt4 onClick={() => setToogle(true)} />}
+
+        {toogle && (
+          <motion.div
+            whileInView={{ x: [200, 0] }}
+            transition={{ duration: 0.85, ease: "easeOut" }}
+          >
+            <HiX onClick={() => setToogle(false)} />
+            <ul>
+              {["home", "about", "contact", "work", "skills"].map(
+                (item, index) => (
+                  <li key={`${item}`} onClick={() => setToogle(false)}>
+                    <a href={`#${item}`}>{item}</a>
+                  </li>
+                )
+              )}
+            </ul>
+          </motion.div>
+        )}
+      </div>
     </nav>
   );
 };
