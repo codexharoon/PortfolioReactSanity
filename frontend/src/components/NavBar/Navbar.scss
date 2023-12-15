@@ -90,7 +90,7 @@
     border-radius: 50%;
     position: relative;
 
-    background-color: var(--secondary-color);
+    background: var(--secondary-color);
 
     display: flex;
     justify-content: center;
@@ -120,7 +120,7 @@
         flex-direction: column;
 
         background-color: var(--white-color);
-        background: url('../../assets/bgWhite.png');
+        background-image: url('../../assets/bgWhite.png');
         background-size: cover;
         background-repeat: repeat;
 
@@ -130,9 +130,9 @@
         svg{
             width: 35px;
             height: 35px;
-            color: var(--white-color);
+            color: var(--secondary-color);
 
-            margin: 0 1rem;
+            margin: 2rem 1rem;
 
         }
 

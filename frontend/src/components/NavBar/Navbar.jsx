@@ -22,7 +22,7 @@ const Navbar = () => {
       </ul>
 
       <div className="app__navbar-menu">
-        {!toogle && <HiMenuAlt4 onClick={() => setToogle(true)} />}
+        <HiMenuAlt4 onClick={() => setToogle(true)} />
 
         {toogle && (
           <motion.div
