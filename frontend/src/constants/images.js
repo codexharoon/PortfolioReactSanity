@@ -23,6 +23,10 @@ import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
+import frontend from '../assets/frontend.jpg';
+import backend from '../assets/backend.jpg';
+import devops from '../assets/devops.jpg';
+
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
@@ -59,6 +63,9 @@ export default {
   about02,
   about03,
   about04,
+  frontend,
+  backend,
+  devops,
   profile,
   circle,
   logo,

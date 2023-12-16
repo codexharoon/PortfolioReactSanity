@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar } from "./components";
 import "./App.scss";
 import Header from "./container/Header/Header";
+import About from "./container/About/About";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div className="app">
         <Navbar />
         <Header />
+        <About />
       </div>
     </>
   );
