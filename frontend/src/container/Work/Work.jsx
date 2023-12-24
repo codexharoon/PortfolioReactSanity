@@ -40,7 +40,6 @@ const Work = () => {
   useEffect(() => {
     const fetchWorks = async () => {
       const works = await client.fetch(`*[_type == "works"]`);
-      console.log(works);
       setWorks(works);
       setFilterWork(works);
     };

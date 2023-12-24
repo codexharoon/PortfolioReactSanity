@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar } from "./components";
 import "./App.scss";
-import { Header, About, Skills, Work } from "./container";
+import { Header, About, Skills, Work, Testimonials } from "./container";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
         <About />
         <Skills />
         <Work />
+        <Testimonials />
       </div>
     </>
   );
