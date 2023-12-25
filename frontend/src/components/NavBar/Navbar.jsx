@@ -13,7 +13,7 @@ const Navbar = () => {
       </div>
 
       <ul className="app__navbar-links">
-        {["home", "about", "contact", "work", "skills"].map((item, index) => (
+        {["home", "about", "skills", "work", "contact"].map((item, index) => (
           <li key={`link-${item}`} className="app__flex p-text">
             <div></div>
             <a href={`#${item}`}>{item}</a>
@@ -31,13 +31,18 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToogle(false)} />
             <ul>
-              {["home", "about", "contact", "work", "skills"].map(
-                (item, index) => (
-                  <li key={`${item}`} onClick={() => setToogle(false)}>
-                    <a href={`#${item}`}>{item}</a>
-                  </li>
-                )
-              )}
+              {[
+                "home",
+                "about",
+                "skills",
+                "work",
+                "testimonial",
+                "contact",
+              ].map((item, index) => (
+                <li key={`${item}`} onClick={() => setToogle(false)}>
+                  <a href={`#${item}`}>{item}</a>
+                </li>
+              ))}
             </ul>
           </motion.div>
         )}
